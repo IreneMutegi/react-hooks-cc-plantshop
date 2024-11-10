@@ -41,6 +41,42 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "noodles",
+      "image": "./assets/ramen/kojiro.jpg",
+      "price": "0.03",
+      "id": 10
+    },
+    {
+      "name": "gsd",
+      "image": "./assets/ramen/kojiro.jpg",
+      "price": "0.01",
+      "id": 11
+    },
+    {
+      "name": "",
+      "image": "./assets/ramen/kojiro.jpg",
+      "price": "0.01",
+      "id": 12
+    },
+    {
+      "name": "dd",
+      "image": "./assets/ramen/kojiro.jpg",
+      "price": "0.01",
+      "id": 13
+    },
+    {
+      "name": "dd",
+      "image": "./assets/ramen/kojiro.jpg",
+      "price": "0.01",
+      "id": 14
+    },
+    {
+      "name": "noodles",
+      "image": "./assets/ramen/kojiro.jpg",
+      "price": "0.02",
+      "id": 15
     }
   ]
 }
