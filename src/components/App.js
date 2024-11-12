@@ -4,13 +4,18 @@ import PlantPage from "./PlantPage";
 
 function App() {
   const [plants, setPlants] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchWord, setSearchWord] = useState("");
+   const baseURL = "https://my-json-server.typicode.com/IreneMutegi/react-hooks-cc-plantshop/plants"
 
   useEffect(() => {
-    fetch("http://localhost:6001/plants")
+    fetch(baseURL)
       .then((response) => response.json())
       .then((data) => setPlants(data));
   }, []);
+
+  const filteredPlants = plants.filter((plant) =>
+    plant.name.toLowerCase().includes(searchWord.toLowerCase())
+  );
 
   function handleAddPlant(newPlant) {
     setPlants([...plants, newPlant]);
@@ -23,10 +28,6 @@ function App() {
     setPlants(updatedPlants);
   }
 
-  const filteredPlants = plants.filter((plant) =>
-    plant.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
   return (
     <div className="app">
       <Header />
@@ -34,7 +35,7 @@ function App() {
         plants={filteredPlants}
         onAddPlant={handleAddPlant}
         onUpdatePlant={handleUpdatePlant}
-        setSearchTerm={setSearchTerm}
+        setSearchWord={setSearchWord}
       />
     </div>
   );

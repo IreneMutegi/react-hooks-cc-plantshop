@@ -8,8 +8,8 @@ function NewPlantForm({ onAddPlant }) {
   function handleSubmit(e) {
     e.preventDefault();
     const newPlant = { name, image, price: price };
-
-    fetch("http://localhost:6001/plants", {
+    const baseURL = "https://my-json-server.typicode.com/IreneMutegi/react-hooks-cc-plantshop/plants"
+    fetch(baseURL, {
       method: "POST",
       headers: {
         "Content-Type": "Application/JSON",
